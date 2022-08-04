@@ -1,0 +1,10 @@
+.newProducts{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+}
+
+.img{
+    width: 100%;
+    height: 400px;
+}

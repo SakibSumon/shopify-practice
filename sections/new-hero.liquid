@@ -1,0 +1,66 @@
+{{ "new-hero.css" | asset_url | stylesheet_tag }}
+
+{% assign data = section.settings %}
+<div class="hero__img">
+  {% if data.new_image %}
+        {% render 'image', imageSrc: data.new_image, classes: 'img' %}
+    {% else %}
+      {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+    {% endif %}
+  <div class="hero__content page-width">
+    <div class="hero__headline">
+      <h1>{{ section.settings.new_hero }}</h1>
+    </div>
+    <div class="hero__sub">
+      <p>
+        {{ section.settings.hero__sub }}
+      </p>
+    </div>
+    <div class="hero__btn">
+      <a href="{{ data.btn_url }}">{{ data.btn_text }}</a>
+    </div>
+  </div>
+</div>
+
+{% schema %} 
+{
+   "name":"New Hero",
+   "settings":[
+      {
+         "type":"text",
+         "id":"new_hero",
+         "label":"Hero Title",
+         "default":"Image banner"
+      },
+      {
+         "type":"text",
+         "id":"hero__sub",
+         "label":"label",
+         "default":"hero Subtitle"
+      },
+      {
+        "type": "image_picker",
+        "id": "new_image",
+        "label": "choose your new image "
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text",
+        "default": "Learn More"
+      },
+      {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button Url",
+        "default": "/"
+      }
+   ],
+   "presets":[
+      {
+         "name":"New Hero"
+      }
+   ]
+}
+
+{% endschema %}

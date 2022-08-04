@@ -1,0 +1,46 @@
+{{ "new-products.css" | asset_url | stylesheet_tag }}
+{% assign data = section.settings %}
+
+<div class="newProducts">
+    <div class="product__left">
+        {% if data.new_image %}
+        {% render 'image', imageSrc: data.new_image, classes: 'img' %}
+    {% else %}
+      {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+    {% endif %}
+    </div>
+    <div class="product__right">
+        <!-- {% render 'icon-cart' %} -->
+        
+        <!-- {% if data.old_image %}
+            {% render 'image', imageSrc: data.old_image, classes: 'img' %}
+        {% else %}
+        {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+        {% endif %} -->
+   </div>
+</div>
+
+
+{% schema %}
+{
+   "name": "New Product",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "new_image",
+        "label": "Upload image"
+    },
+    {
+     "type": "image_picker",
+     "id": "old_image",
+     "label": "old image"
+    }
+  ],
+
+ "presets": [
+    {
+        "name":"New Products"
+    }
+ ]
+}
+{% endschema %}
