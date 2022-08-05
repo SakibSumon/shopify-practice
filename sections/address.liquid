@@ -1,0 +1,33 @@
+
+
+{{ "address.css" | asset_url | stylesheet_tag }}
+
+{% assign data = section.settings %}
+<div class="header_img">
+    <div class="header_overlay">&nbsp;</div>
+    {% if data.header_image %}
+        {% render 'image', imageSrc: data.header_image, classes: 'img' %}
+    {% else %}
+      {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+    {% endif %}
+
+    <div class="header_content">
+        <div class="header_title">
+             <h1>You will find <br> everythng</h1>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+   "name": "address",
+   "settings": [
+   {
+    "type": "image_picker",
+    "id": "header_image",
+    "label": "label"
+   }
+   ]
+}
+{% endschema %}

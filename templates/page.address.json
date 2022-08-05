@@ -3,7 +3,7 @@
     "main": {
       "type": "address",
       "settings": {
-        
+        "header_image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg"
       }
     }
   },
