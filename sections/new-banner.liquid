@@ -1,0 +1,112 @@
+{{ "new-banner.css" | asset_url | stylesheet_tag }}
+
+{% assign data = section.blocks %}
+<div class="slider">
+ 
+  <div class="main-carousel">
+    {% for item in section.blocks %}
+      <div class="carousel-cell">
+         
+        {% if item.settings.image %}
+          {% render 'image', imageSrc: item.settings.image, classes: 'img' %}
+      {% else %}
+        {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+      {% endif %}
+        <div class="hero-content page-width">
+          <h1 class="head align"> {{ item.settings.title }}</h1>
+          <p class="sub align">{{ item.settings.sub }} </p>
+          <!-- <button class="btn1 btn"><a href=" {{ item.settings.btn1_url }} "> {{ item.settings.btn1_text }} </a></button>
+          <button class="btn2 btn"><a href=" {{ item.settings.btn2_url }} "> {{ item.settings.btn2_text }} </a></button> -->
+         <div class="btns">
+           <a class="btn btn1" href="{{ item.settings.btn1_url }}">   {{ item.settings.btn1_text }}  </a>
+          <a class="btn btn2" href="{{ item.settings.btn2_url }}">   {{ item.settings.btn2_text }}  </a>
+         </div>
+        </div>
+        <div class="overlay">&nbsp;</div>
+       </div>
+    {% endfor %}
+
+ 
+      </div>
+  
+  
+</div>
+
+<script>
+  var elem = document.querySelector('.main-carousel');
+  var flkty = new Flickity( elem, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+    adaptiveHeight: true,
+    pageDots: true
+  });
+</script>
+
+{% schema %}
+{
+   "name": "New Banner",
+  "blocks": [
+    {
+      "type": "hero_images",
+      "name": "Slider Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Make the Most of Morning"
+        },
+        {
+          "type": "text",
+          "id": "sub",
+          "label": "Subtitle",
+          "default": "The quickest, easiest way to get in your fruits and veggies"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag Text",
+          "default": "ORGINAL SMOOTHIES"
+        },
+        {
+          "type": "text",
+          "id": "btn1_text",
+          "label": "Button 1 Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "btn1_url",
+          "label": "Button 1 Url",
+          "default": "/"
+        },
+        {
+          "type": "text",
+          "id": "btn2_text",
+          "label": "Button 2 Text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "btn2_url",
+          "label": "Button 2 Url",
+          "default": "/"
+        }
+      ]
+    }
+  ],
+
+
+ "presets": [
+    {
+        "name":"New Banner"
+    }
+ ]
+}
+{% endschema %}

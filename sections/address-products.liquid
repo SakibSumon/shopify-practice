@@ -3,12 +3,21 @@
 
 <div class="address-products">
     <div class="add-pro-left">
-      <h1>hi</h1>
+      {% if data.add_product_left %}
+        {% render 'image', imageSrc: data.add_product_left, classes: 'img' %}
+    {% else %}
+      {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+    {% endif %}
+
+   
     </div>
     <div class="add-pro-right">
-        <h1>hi</h1>
+        {% if data.add_pro_right %}
+        {% render 'image', imageSrc: data.add_pro_right, classes: 'img' %}
+    {% else %}
+      {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+    {% endif %}
     </div>
-
 
 </div>
 
@@ -18,7 +27,16 @@
    "name": "address products",
 
   "settings": [
-    
+   {
+    "type": "image_picker",
+    "id": "add_product_left",
+    "label": "add your product image here"
+   },
+  {
+    "type": "image_picker",
+    "id": "add_pro_right",
+    "label": "add your product image here"
+  }
   ],
 
  "presets": [

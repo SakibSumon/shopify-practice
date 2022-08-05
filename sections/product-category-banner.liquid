@@ -1,0 +1,190 @@
+ {{ "product-category-banner.css" | asset_url | stylesheet_tag }}
+
+ 
+ <section class="product-category">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title text-center">
+            <h2>Product Category</h2>
+          </div>
+        </div>
+
+        <div class="col-md-6 product_row">
+          <div class="category-box">
+            <a href="{{ section.settings.category_top_left_url }}">
+                {% if section.settings.category_top_left %}
+                    {% render 'image', imageSrc: section.settings.category_top_left, classes: 'img' %}
+                {% else %}
+                    {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+                {% endif %}
+              <div class="content">
+                <h3>{{ section.settings.category_top_left_header }}</h3>
+                <p>{{ section.settings.catefory_top_left_text }}</p>
+              </div>
+            </a>
+          </div>
+          <div class="category-box">
+           <a href="{{ section.settings.category_bottom_url }}">
+                {% if section.settings.category_bottom_img %}
+                    {% render 'image', imageSrc: section.settings.category_bottom_img, classes: 'img' %}
+                {% else %}
+                    {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+                {% endif %}
+              <div class="content">
+                <h3>{{ section.settings.category_bottom_header }}</h3>
+                <p>{{ section.settings.catefory_bottom_text }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="div">
+            <ul>
+                {% for product in section.settings.collection.products limit: 8 %}
+                    <li>
+                        <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" /> 
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+<!-- 
+        <div class="col-md-6">
+          <div class="category-box category-box-2">
+          <a href="{{ section.settings.category_right_url }}">
+                {% if section.settings.category_right_img %}
+                    {% render 'image', imageSrc: section.settings.category_right_img, classes: 'img' %}
+                {% else %}
+                    {% render 'image', imageSrc: 'mentis-black.png' , classes: 'img', altTag: 'logo-black', isAsset: true %}
+                {% endif %}
+              <div class="content">
+                <h3>{{ section.settings.category_right_header }}</h3>
+                <p>{{ section.settings.catefory_right_text }}</p>
+              </div>
+            </a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+
+
+
+      <div class="div">
+            <ul>
+                {% for product in section.settings.collection.products limit: 8 %}
+                    <li>
+                        <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" /> 
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+
+
+  </section>
+
+  {% schema %}
+  {
+    "name": "Product Category Banner",
+   "settings": [
+    {
+        "type": "text",
+        "id": "category_top_left_header",
+        "label": "Category Top Left Header",
+        "default": "Dress"
+    },
+
+   {
+        "type": "text",
+        "id": "catefory_top_left_text",
+        "label": "category top left text",
+        "default": "Sale!"
+   },
+
+    {
+        "type": "collection",
+        "id": "collection",
+        "label": "category top left"
+    },
+
+    {
+        "type": "url",
+        "id": "category_top_left_url",
+        "label": "category top link",
+        "default": "/"
+    },
+
+
+
+
+
+     {
+        "type": "text",
+        "id": "category_bottom_header",
+        "label": "Category bottom Left Header",
+        "default": "Dress"
+    },
+
+   {
+        "type": "text",
+        "id": "category_bottom_text",
+        "label": "category bottom left text",
+        "default": "Sale!"
+   },
+
+    {
+        "type": "collection",
+        "id": "category_bottom_img",
+        "label": "category bottom left"
+    },
+
+    {
+        "type": "url",
+        "id": "category_bottom_url",
+        "label": "category bottom link",
+        "default": "/"
+    },
+
+
+
+
+
+     {
+        "type": "text",
+        "id": "category_right_header",
+        "label": "Category right Header",
+        "default": "Dress"
+    },
+
+   {
+        "type": "text",
+        "id": "catefory_right_text",
+        "label": "category right text",
+        "default": "Sale!"
+   },
+
+    {
+        "type": "collection",
+        "id": "category_right_img",
+        "label": "category right"
+    },
+
+    {
+        "type": "url",
+        "id": "category_right_url",
+        "label": "category right link",
+        "default": "/"
+    }
+   ],
+
+    "presets": [
+        {
+            "name":"product Category Banner"
+        }
+    ]
+  }
+  {% endschema %}

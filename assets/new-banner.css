@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+     font-family: 'Nunito Sans', sans-serif;
+     margin: 0 0 ;
+     padding: 0 0;
+}
+
+.slider{
+    position: relative;
+    height: 700px;
+    display: block;
+}
+
+.overlay{
+   z-index: 1;
+    position: absolute;
+    opacity: .2;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+}
+
+.main-carousel{
+    position: relative;
+    height: 700px;
+    width: 100%;
+}
+
+.carousel-cell{
+    width: 100vw;
+    height: 700px;
+}
+
+.img{
+    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-content{
+    z-index: 2;
+    position: absolute;
+    top:60%
+
+}
+
+
+ .align{
+    /* position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-70%, -50%); */
+
+}
+
+.head{
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 70px;
+
+}
+
+.sub{
+    color: white;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19.2px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+}
+
+.slider .flickity-page-dots{
+    bottom: 24px;
+}
+
+.btns{
+    display: flex;
+    gap: 20px;
+}
+
+.btn{
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 14px 52px;
+    transition: all 1s;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.btn1{ 
+    background-color: white;
+}
+
+.btn1:hover{
+    background-color: black;
+    color: white;
+}
+
+.btn2{
+    background-color: black;
+    color: white;
+}
+
+.btn2:hover{
+    background-color: white;
+    color: black;
+}
