@@ -2,6 +2,7 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -35,8 +36,8 @@
         "button"
       ],
       "settings": {
-        "image": "{{ shop.brand.cover_image }}",
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/Rectangle_2.png",
+        "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": false,
         "desktop_content_position": "bottom-center",
@@ -46,6 +47,57 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "165993308281207ea3": {
+      "type": "new-banner",
+      "blocks": {
+        "08120d0a-3b40-498c-b474-5f8e297506f9": {
+          "type": "hero_images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/boots-on-blue.jpg",
+            "title": "Make the Most of Morning",
+            "sub": "The quickest, easiest way to get in your fruits and veggies",
+            "tag": "ORGINAL SMOOTHIES",
+            "btn1_text": "Learn More",
+            "btn1_url": "\/",
+            "btn2_text": "Shop Now",
+            "btn2_url": "\/"
+          }
+        },
+        "22bb82f9-8b04-42ce-8a7f-873f9de4ad11": {
+          "type": "hero_images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
+            "title": "Make the Most of Morning",
+            "sub": "The quickest, easiest way to get in your fruits and veggies",
+            "tag": "ORGINAL SMOOTHIES",
+            "btn1_text": "Learn More",
+            "btn1_url": "\/",
+            "btn2_text": "Shop Now",
+            "btn2_url": "\/"
+          }
+        },
+        "ebe50a7a-4550-4b91-a235-8a75d5e1793f": {
+          "type": "hero_images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/purchased-favorite-coffee.jpg",
+            "title": "Make the Most of Morning",
+            "sub": "The quickest, easiest way to get in your fruits and veggies",
+            "tag": "ORGINAL SMOOTHIES",
+            "btn1_text": "Learn More",
+            "btn1_url": "\/",
+            "btn2_text": "Shop Now",
+            "btn2_url": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "08120d0a-3b40-498c-b474-5f8e297506f9",
+        "22bb82f9-8b04-42ce-8a7f-873f9de4ad11",
+        "ebe50a7a-4550-4b91-a235-8a75d5e1793f"
+      ],
+      "settings": {
       }
     },
     "rich_text": {
@@ -212,6 +264,7 @@
   },
   "order": [
     "image_banner",
+    "165993308281207ea3",
     "rich_text",
     "featured_collection",
     "collage",
