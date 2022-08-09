@@ -1,81 +1,78 @@
  {{ "product-grid.css" | asset_url | stylesheet_tag }}
 {% assign data = section.settings %}
 
- <section class="product-grid element-margin-top page-width">
-    <div class="product-grid_left">
-        <div class="product-left_top">
+ <div class="pd">
+     <section class="product-grid element-margin-top page-width">
+        <div class="product-grid_left">
+            <div class="product-left_top">
+                <div class="overlay-product">&nbsp;</div>
+                     <div class="product-img-div">
+                     {% if data.left_top %}
+                        {% render 'image', imageSrc: data.left_top, classes: 'right-img' %}
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'right-img' }}
+                    {% endif %}
+                     </div>
+     
+                <div class="product-text-content content-padding top-content-top">
+                    <h2>Smoothies</h2>
+                    <p>This smoothie totally changed my world. Our juices are made from the freshest fruits and natural ingredients. </p>
+                    <a  class="btn-width-height btn-hover " href="{{ data.product_left_top_url }}">  {{ data.product_left_top_text}} </a>
+                </div>
+     
+            </div>
+     
+            <div class="product-left_bottom">
+                <div class="bottom-left">
+                    <div class="overlay-product">&nbsp;</div>
+                    <div class="product-img-div">
+                    {% if data.bottom_left %}
+                        {% render 'image', imageSrc: data.bottom_left, classes: 'right-img' %}
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'product-img' }}
+                    {% endif %}
+                    </div>
+                    <div class="product-text-content content-padding ">
+                        <h2>Smoothies</h2>
+                        <p>Very good for a Saturday morning breakfast!</p>
+                        <a  class="btn-width-height btn-hover " href="{{ data.product_left_top_url }}">  {{ data.product_left_top_text}} </a>
+                    </div>
+                </div>
+                <div class="bottom-right">
+                    <div class="product-img-div">
+                    {% if data.bottom_right %}
+                        {% render 'image', imageSrc: data.bottom_right, classes: 'right-img' %}
+                        <div class="overlay-product">&nbsp;</div>
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'product-img' }}
+                    {% endif %}
+                    </div>
+                     <div class="product-text-content content-padding ">
+                        <h2>Smoothies</h2>
+                        <p>Very good for a Saturday morning breakfast!</p>
+                        <a  class="btn-width-height btn-hover " href="{{ data.product_left_top_url }}">  {{ data.product_left_top_text}} </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-grid_right">
             <div class="overlay-product">&nbsp;</div>
-                {% if data.left_top %}
-                    {% render 'image', imageSrc: data.left_top, classes: 'right-img' %}
-                {% else %}
-                    {{ 'image' | placeholder_svg_tag: 'product-img' }}
-                {% endif %}
-        
-            <div class="product-text-content content-padding">
+          <div class="product-img-div">
+            {% if data.right_image %}
+                {% render 'image', imageSrc: data.right_image, classes: 'right-img' %}
+            {% else %}
+                {{ 'image' | placeholder_svg_tag: 'right-img' }}
+            {% endif %}
+          </div>
+             <div class="product-text-content content-padding content-top ">
                 <h2>Smoothies</h2>
-                <p>This smoothie totally changed my world. Our juices are made from the freshest fruits and natural ingredients. </p>
-
+                <p>The best of fresh, seasonal ingredients create healthy and satisfying breakfast smoothies all year round. Spring is here, which means we're harvesting fresh fruits and veggies for our seasonal favorites!</p>
                 <a  class="btn-width-height btn-hover " href="{{ data.product_left_top_url }}">  {{ data.product_left_top_text}} </a>
             </div>
-        
-        </div> 
-
-        
-        <div class="product-left_bottom">
-            <div class="bottom-left">
-                <div class="overlay-product">&nbsp;</div>
-                {% if data.bottom_left %}
-                    {% render 'image', imageSrc: data.bottom_left, classes: 'right-img' %}
-                {% else %}
-                    {{ 'image' | placeholder_svg_tag: 'product-img' }}
-                {% endif %}
-
-                <div class="product-text-content content-padding ">
-                    <h2>Smoothies</h2>
-                    <p>Very good for a Saturday morning breakfast!</p>
-
-                    <a  class="btn-width-height btn-hover " href="{{ data.product_left_top_url }}">  {{ data.product_left_top_text}} </a>
-                </div>
-            </div>
-            <div class="bottom-right">
-                
-                {% if data.bottom_right %}
-                    {% render 'image', imageSrc: data.bottom_right, classes: 'right-img' %}
-                    <div class="overlay-product">&nbsp;</div>
-                {% else %}
-                    {{ 'image' | placeholder_svg_tag: 'product-img' }}
-                {% endif %}
-
-                 <div class="product-text-content content-padding ">
-                    <h2>Smoothies</h2>
-                    <p>Very good for a Saturday morning breakfast!</p>
-
-                    <a  class="btn-width-height btn-hover " href="{{ data.product_left_top_url }}">  {{ data.product_left_top_text}} </a>
-                </div>
-            </div>
         </div>
-    </div>
-    <div class="product-grid_right">
-        <div class="overlay-product">&nbsp;</div>
-        {% if data.right_image %}
-            {% render 'image', imageSrc: data.right_image, classes: 'right-img' %}
-        {% else %}
-            {{ 'image' | placeholder_svg_tag: 'product-img' }}
-        {% endif %}
-
-         <div class="product-text-content content-padding content-top ">
-            <h2>Smoothies</h2>
-            <p>The best of fresh, seasonal ingredients create healthy and satisfying breakfast smoothies all year round. Spring is here, which means we're harvesting fresh fruits and veggies for our seasonal favorites!</p>
-
-            <a  class="btn-width-height btn-hover " href="{{ data.product_left_top_url }}">  {{ data.product_left_top_text}} </a>
-        </div>
-    </div>
      
-
-
-
-
- </section>
+     </section>
+ </div>
 
 
  {% schema %}
@@ -86,39 +83,28 @@
 {
     "type": "collection",
     "id": "right_image",
-    "label": "label",
+    "label": "label"
     
 },
 
 {
     "type": "collection",
     "id": "bottom_left",
-    "label": "label",
-    "info": ""
+    "label": "label"
+    
 },
 
 {
     "type": "collection",
     "id": "bottom_right",
-    "label": "bottom left",
-    "info": ""
+    "label": "bottom left"
+   
 },
 
 {
     "type": "collection",
     "id": "left_top",
     "label": "left top"
-},
-{
-    "type": "image_picker",
-    "id": "bottom_left",
-    "label": "bottom left"
-},
-
-{
-    "type": "image_picker",
-    "id": "bottom_right",
-    "label": "bottom right"
 },
 
 {
