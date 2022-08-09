@@ -1,11 +1,11 @@
  {{ "product-category-banner.css" | asset_url | stylesheet_tag }}
 
- 
- <section class="product-category">
+ {% assign data = section.settings %}
+ <section class="product-category ">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="title text-center">
+          <div class="title text-center page-width">
             <h2>Product Category</h2>
           </div>
         </div>
@@ -69,28 +69,57 @@
       </div>
     </div>
 
-
-<div class="div">
-            <ul>
-                {% for product in section.settings.collection.products limit: 8 %}
-                    <li>
-                        <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" /> 
-                    </li>
-                {% endfor %}
-            </ul>
-
-        </div>
-
-      
-
-
-
+      <div class="product-carousel page-width">
+            {% for product in section.settings.collection.products limit: 8 %}
+                  <div class="product-cell">
+                          <!-- <img class="product-img" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />  -->
+                    <div class=" product-div">
+                        {% if product.featured_image %}
+                          {% render 'image', imageSrc: product.featured_image, classes: 'product-img' %}
+                        {% else %}
+                          {{ 'image' | placeholder_svg_tag: 'product-img' }}
+                        {% endif %}
+                    </div>
+                    <div class="product-content">
+                        <p class="product-desc price">{{ product.price | money }}</p>
+                        <p class="product-desc pro-title">{{ product.title  }}</p>
+                    </div>
+                  </div>
+            {% endfor %}
+      </div>
   </section>
+
+  <div class="product_btn">
+    <button> <a href=""> View All</a></button>
+  </div>
+
+  <script>
+  var el = document.querySelector('.product-carousel');
+  var fl = new Flickity( el, {
+    cellAlign: 'left',
+    accessibility: false,
+    contain: true,
+    pageDots: true,
+    wrapAround: true,
+    freeScroll: true
+  });
+</script>
+
+
+
 
   {% schema %}
   {
     "name": "Product Category Banner",
    "settings": [
+
+    {
+      "type": "text",
+      "id": "price",
+      "label": "Put Price",
+      "default": "00.0"
+    },
+
     {
         "type": "text",
         "id": "category_top_left_header",

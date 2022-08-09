@@ -1,4 +1,85 @@
-.product_row{
-    display: flex;
-    gap: 20px;
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+.product-cell{
+ 
+  width: 25%;
+  margin-right: 1.5rem;
+}
+
+.product-div{
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 150%;
+}
+
+.product-img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover; 
+}
+
+
+
+.product-desc{
+   text-align: center;
+}
+
+
+.pro-title{
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #313131;
+}
+
+/* .flickity-prev-next-button{
+   background-color: red;
+   
+}
+
+.flickity-button-icon{
+    display: none;
+}
+
+.flickity-button{
+    background-image: url(../assets/Vector.png);
+} */
+
+
+
+
+
+@media screen and (max-width: 768px){
+    .product-cell{
+        width: 50%;
+        margin-right: 1.5rem;
+    }
+    
+    .product-div{
+        padding-bottom: 120%;
+    }
+}
+
+@media screen and (max-width:480px){
+   
+   
+
+    .product-cell{
+        width: 100%;
+        margin-right: 1.5rem;
+    }
+    
+    .product-div{
+        padding-bottom: 120%;
+    }
 }

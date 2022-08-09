@@ -100,8 +100,26 @@
       "settings": {
       }
     },
+    "16599334881f4591de": {
+      "type": "product-category-banner",
+      "settings": {
+        "category_top_left_header": "Dress",
+        "catefory_top_left_text": "Sale! to everyone",
+        "collection": "frontpage",
+        "category_top_left_url": "\/",
+        "category_bottom_header": "Dress",
+        "category_bottom_text": "Sale!",
+        "category_bottom_img": "",
+        "category_bottom_url": "\/",
+        "category_right_header": "Dress",
+        "catefory_right_text": "Sale!",
+        "category_right_img": "",
+        "category_right_url": "\/"
+      }
+    },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -132,6 +150,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -265,6 +284,7 @@
   "order": [
     "image_banner",
     "165993308281207ea3",
+    "16599334881f4591de",
     "rich_text",
     "featured_collection",
     "collage",
