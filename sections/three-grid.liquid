@@ -1,0 +1,30 @@
+ {{ "three-grid.css" | asset_url | stylesheet_tag }}
+
+<section class="three-grid page-width element-margin-top">
+    <div class="grid_left"><h2>Lighteniam has a simple mission, fresh, delicious, and healthy.</h2></div>
+    <div class="grid_mid"> <img class="grid-img" src="{{ 'Vector.png' | asset_url }}"> </div>
+    <div class="grid_right">
+            <p>Popular vegetables are cucumber, carrots, celery, spinach, beets, kale, and 
+            romaine. Great fruits for juicing are oranges, lemons, apples, and limes.
+            You can also add-in fresh ginger, turmeric, andparsley.</p>
+    </div>
+</section>
+
+
+
+{% schema %}
+{
+   "name": "Three Grid",
+
+  "settings": [
+    
+  ],
+
+ "presets": [
+    {
+        "name":"Three grid section"
+    }
+ ]
+
+}
+{% endschema %}
