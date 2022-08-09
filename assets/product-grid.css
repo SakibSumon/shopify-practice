@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+.product-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.product-left_top{
+    position: relative;
+    height: 50%;
+}
+
+.product-grid_left{
+  position: relative;
+  display: flex;
+
+
+  flex-direction: column;
+  flex-grow: 1;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  gap: 20px;
+
+}
+
+.product-grid_right{
+    position: relative;
+    background-color: antiquewhite;
+    gap: 20px;
+}
+
+.product-left_bottom{
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 20px;
+    height: 50%;
+}
+
+.bottom-left{
+position: relative;
+}
+
+.bottom-right{
+    position: relative;
+}
+
+.right-img{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay-product{
+    z-index: 1;
+    position: absolute;
+    opacity: .4;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+.content-padding{
+    padding: 0 10px;
+}
+
+
+.btn-hover{
+    text-decoration: none;
+}
+
+.product-text-content{
+    z-index: 10;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    color: white;
+
+}
+
+.product-text-content h2, p{
+    color: white;
+    line-height: 20px;
+}
+
+product-text-content h2{
+    color: white;
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 23.04px;
+    line-height: 28px;
+}
+.content-top{
+    top: 60%;
+}

@@ -61,14 +61,6 @@ body{
 }
 
 
- .align{
-    /* position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-70%, -50%); */
-
-}
-
 .head{
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
@@ -99,24 +91,71 @@ body{
 }
 
 .btn{
-    font-family: 'Nunito Sans', sans-serif;
-    padding: 14px 28px;
-    transition: all 1s;
+  
+    transition: all .5s;
     text-decoration: none;
     font-size: 12px;
     line-height: 2;
+color: #000;
 }
+
+
+.black-bck{
+    background-color: black;
+    color: white;
+    
+}
+
 
 .btn1{ 
     background-color: white;
 }
 
-.btn1:hover{
+.btn2{ 
     background-color: black;
     color: white;
 }
 
-.btn2{
+.btn1:hover{
+    cursor: pointer;
+    border: none;
+   
+    background-color: black;
+    color: white;
+}
+
+.btn2:hover{
+    cursor: pointer;
+    border: none;
+   
+    background-color: white;
+    color: black;
+}
+
+/* .btn1-hover:hover{
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.btn2-hover{
+    cursor: pointer;
+    transition: all .5s;
+    border: none;
+}
+
+.btn2-hover:hover{
+    background-color: white;
+    color: black;
+    border: none;
+} */
+
+/* .btn1-font:hover{
+    background-color: black;
+    color: white;
+}
+
+.btn2-font{
     background-color: black;
     color: white;
 }
@@ -124,16 +163,12 @@ body{
 .btn2:hover{
     background-color: white;
     color: black;
-}
+} */
 
 
-.product_btn{
-    padding: 10px 20px;
-    
-}
 
-.product_btn a{
-    text-decoration: none;
+.btn-border:hover{
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 1366px){

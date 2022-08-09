@@ -70,43 +70,45 @@
     </div>
 
       <div class="product-carousel page-width">
-            {% for product in section.settings.collection.products limit: 8 %}
+            {% for product in section.settings.collection.products limit: 4 %}
                   <div class="product-cell">
                           <!-- <img class="product-img" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />  -->
-                    <div class=" product-div">
-                        {% if product.featured_image %}
-                          {% render 'image', imageSrc: product.featured_image, classes: 'product-img' %}
-                        {% else %}
-                          {{ 'image' | placeholder_svg_tag: 'product-img' }}
-                        {% endif %}
-                    </div>
-                    <div class="product-content">
-                        <p class="product-desc price">{{ product.price | money }}</p>
-                        <p class="product-desc pro-title">{{ product.title  }}</p>
-                    </div>
+                   <a href="{{ product.url }}">
+                      <div class=" product-div">
+                            {% if product.featured_image %}
+                              {% render 'image', imageSrc: product.featured_image, classes: 'product-img' %}
+                            {% else %}
+                              {{ 'image' | placeholder_svg_tag: 'product-img' }}
+                            {% endif %}
+                      </div>
+                      <div class="product-content">
+                          <p class="product-desc price">{{ product.price | money }}</p>
+                          <p class="product-desc pro-title">{{ product.title  }}</p>
+                      </div>
+                  </a>
                   </div>
             {% endfor %}
       </div>
   </section>
 
-  <div class="product_btn">
-    <button> <a href=""> View All</a></button>
+  <div class="product_btn element-margin-top ">
+    <!-- <button class="btn-width-height btn1-hover btn-border"> <a href="{{ data.btn_url }}"> </a> {{ data.btn_text }} </button> -->
+
+    <a  class="btn-width-height btn-hover " href="{{ data.btn_url }}">  {{ data.btn_text }} </a>
   </div>
 
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   <script>
   var el = document.querySelector('.product-carousel');
   var fl = new Flickity( el, {
     cellAlign: 'left',
     accessibility: false,
     contain: true,
-    pageDots: true,
     wrapAround: true,
     freeScroll: true
   });
 </script>
-
-
-
 
   {% schema %}
   {
@@ -138,76 +140,22 @@
         "type": "collection",
         "id": "collection",
         "label": "category top left"
-    },
+    }, 
 
     {
-        "type": "url",
-        "id": "category_top_left_url",
-        "label": "category top link",
-        "default": "/"
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text",
+          "default": "v More"
     },
-
-
-
-
 
      {
-        "type": "text",
-        "id": "category_bottom_header",
-        "label": "Category bottom Left Header",
-        "default": "Dress"
-    },
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button  Url",
+          "default": "/"
+     }
 
-   {
-        "type": "text",
-        "id": "category_bottom_text",
-        "label": "category bottom left text",
-        "default": "Sale!"
-   },
-
-    {
-        "type": "collection",
-        "id": "category_bottom_img",
-        "label": "category bottom left"
-    },
-
-    {
-        "type": "url",
-        "id": "category_bottom_url",
-        "label": "category bottom link",
-        "default": "/"
-    },
-
-
-
-
-
-     {
-        "type": "text",
-        "id": "category_right_header",
-        "label": "Category right Header",
-        "default": "Dress"
-    },
-
-   {
-        "type": "text",
-        "id": "catefory_right_text",
-        "label": "category right text",
-        "default": "Sale!"
-   },
-
-    {
-        "type": "collection",
-        "id": "category_right_img",
-        "label": "category right"
-    },
-
-    {
-        "type": "url",
-        "id": "category_right_url",
-        "label": "category right link",
-        "default": "/"
-    }
    ],
 
     "presets": [

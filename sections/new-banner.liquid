@@ -15,11 +15,14 @@
         <div class="hero-content page-width">
           <h1 class="head align"> {{ item.settings.title }}</h1>
           <p class="sub align">{{ item.settings.sub }} </p>
-          <!-- <button class="btn1 btn"><a href=" {{ item.settings.btn1_url }} "> {{ item.settings.btn1_text }} </a></button>
-          <button class="btn2 btn"><a href=" {{ item.settings.btn2_url }} "> {{ item.settings.btn2_text }} </a></button> -->
+         
          <div class="btns">
-           <a class="btn btn1" href="{{ item.settings.btn1_url }}">   {{ item.settings.btn1_text }}  </a>
-          <a class="btn btn2" href="{{ item.settings.btn2_url }}">   {{ item.settings.btn2_text }}  </a>
+           <!-- <button class="btn-width-height btn1-hover "> <a class="btn1-font" href="{{ item.settings.btn1_url }}"> </a>
+            {{ item.settings.btn1_text }}</button>
+
+           <button class="btn-width-height black-bck btn2-hover "> <a class="btn2-font" href="{{ item.settings.btn2_url }}"> </a> {{ item.settings.btn2_text }}</button> -->
+           <a class=" btn-width-height btn btn1" href="{{ item.settings.btn1_url }}">   {{ item.settings.btn1_text }}  </a>
+          <a class=" btn-width-height btn btn2 " href="{{ item.settings.btn2_url }}">   {{ item.settings.btn2_text }}  </a>
          </div>
         </div>
         <div class="overlay">&nbsp;</div>
@@ -93,6 +96,7 @@
           "label": "Button 2 Url",
           "default": "/"
         }
+
       ]
     }
   ],

@@ -2886,3 +2886,12 @@ details-disclosure > details {
 .font-body-bold {
   font-weight: var(--font-body-weight-bold);
 }
+
+
+.btn-width-height{
+ 
+  padding: 12px 54px;
+   font-family: 'Nunito Sans', sans-serif;
+  
+}
+
