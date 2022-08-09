@@ -70,7 +70,7 @@
     </div>
 
       <div class="product-carousel page-width">
-            {% for product in section.settings.collection.products limit: 4 %}
+            {% for product in section.settings.collection.products limit: 8 %}
                   <div class="product-cell">
                           <!-- <img class="product-img" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />  -->
                    <a href="{{ product.url }}">
