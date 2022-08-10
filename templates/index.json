@@ -103,18 +103,36 @@
     "16599334881f4591de": {
       "type": "product-category-banner",
       "settings": {
+        "price": "00.0",
         "category_top_left_header": "Dress",
         "catefory_top_left_text": "Sale! to everyone",
         "collection": "frontpage",
-        "category_top_left_url": "\/",
-        "category_bottom_header": "Dress",
-        "category_bottom_text": "Sale!",
-        "category_bottom_img": "",
-        "category_bottom_url": "\/",
-        "category_right_header": "Dress",
-        "catefory_right_text": "Sale!",
-        "category_right_img": "",
-        "category_right_url": "\/"
+        "btn_text": "v More",
+        "btn_url": "\/"
+      }
+    },
+    "1660046302d58b477e": {
+      "type": "product-grid",
+      "settings": {
+        "right_image": "frontpage",
+        "bottom_left": "mens",
+        "bottom_right": "frontpage",
+        "left_top": "frontpage",
+        "product_left_top_text": "Shop Now",
+        "product_left_top_url": "\/",
+        "product_left_bot_right_url": "\/",
+        "product_left_bot_left_url": "\/",
+        "product_right_url": "\/"
+      }
+    },
+    "16600463145f1d9bc3": {
+      "type": "three-grid",
+      "settings": {
+      }
+    },
+    "16600463231c3e48db": {
+      "type": "product-list",
+      "settings": {
       }
     },
     "rich_text": {
@@ -285,6 +303,9 @@
     "image_banner",
     "165993308281207ea3",
     "16599334881f4591de",
+    "1660046302d58b477e",
+    "16600463145f1d9bc3",
+    "16600463231c3e48db",
     "rich_text",
     "featured_collection",
     "collage",

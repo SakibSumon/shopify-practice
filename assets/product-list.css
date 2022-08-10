@@ -1,1 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+.product-list{
+    height: 600px;
+    background-color: aliceblue;
+
+}
+
+.prodList{
+     display: grid;
+   grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.product_lists-img{
+   display: flex;
+   justify-content: center;
+
+}
+
+
+
+.prodList-row {
+    text-decoration: none;
+}
+
+
+.prodList-row p{
+    color: black;
+   
+   
+}
+
+.prodList-imgArea{
+    /* position: relative; */
+    /* height: 0; */
+    width: 100%;
+    /* padding-bottom: 150%; */
+}
+
+.prodList-img{
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    /* top: 0;
+    left: 0; */
+    object-fit: cover; 
+}
+
+.prodList-text{
+    font-family: 'Nunito Sans';
+    text-align: center;
+}
+
+.prodList-btn-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.prodList-btn{
+    font-family: 'Nunito Sans';
+    margin-bottom: 30px;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+
+}
+

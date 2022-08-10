@@ -1,27 +1,35 @@
  {{ "product-list.css" | asset_url | stylesheet_tag }}
+ {% assign prodList_data = section.settings %}
 
- <section class="product-list">
+ <section class="prodList page-width element-margin">
 
-{% for product in section.settings.collection.products limit: 8 %}
-                  <div class="product-cell">
-                          <!-- <img class="product-img" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />  -->
-                   <a href="{{ product.url }}">
-                      <div class=" product-div">
+            {% for product in section.settings.collections.products limit: 8 %}
+                  
+                   <a class="prodList-row" href="{{ product.url }}">
+                      <div class="prodList-imgArea">
                             {% if product.featured_image %}
-                              {% render 'image', imageSrc: product.featured_image, classes: 'product-img' %}
+                              {% render 'image', imageSrc: product.featured_image, classes: 'prodList-img' %}
                             {% else %}
-                              {{ 'image' | placeholder_svg_tag: 'product-img' }}
+                              {{ 'image' | placeholder_svg_tag: 'prodList-product-img' }}
                             {% endif %}
                       </div>
-                      <div class="product-content">
-                          <p class="product-desc price">{{ product.price | money }}</p>
-                          <p class="product-desc pro-title">{{ product.title  }}</p>
+                      <div class="prodList-text">
+                          <p class="">{{ product.price | money }}</p>
+                          <p class="">{{ product.title  }}</p>
                       </div>
                   </a>
-                  </div>
             {% endfor %}
+
+
+              
  </section>
 
+
+ <div class="prodList-btn-div page-width element-margin">
+  <a class="btn-width-height prodList-btn" href="{{ prodList_data.prod_list_url }}"> {{ prodList_data.prod_list_btn_text }}  </a>
+
+ </div>
+ 
 
 
  {% schema %}
@@ -29,7 +37,23 @@
     "name": "Product List",
 
     "settings": [
-        
+       {
+        "type": "collection",
+        "id": "collections",
+        "label": "label"
+       },
+
+      {
+        "type": "text",
+        "id": "prod_list_btn_text",
+        "label": "label",
+        "default": "View Mo"
+      },
+      {
+        "type": "url",
+        "id": "prod_list_url",
+        "label": "product list link"
+      }
     ],
 
     "presets": [
