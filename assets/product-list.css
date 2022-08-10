@@ -8,6 +8,7 @@
 }
 
 .prodList{
+   
      display: grid;
    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -24,20 +25,50 @@
 
 .prodList-row {
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
 }
 
 
 .prodList-row p{
+    
     color: black;
    
    
 }
 
 .prodList-imgArea{
+   
     /* position: relative; */
     /* height: 0; */
+    position: relative;
     width: 100%;
     /* padding-bottom: 150%; */
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.prodList-overlay-script{
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    transition: all .5s ease;
+}
+
+.prodList-overlay{
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .3;
+    transition: all .5s ease-in-out;
 }
 
 .prodList-img{
@@ -47,6 +78,7 @@
     /* top: 0;
     left: 0; */
     object-fit: cover; 
+    display: block;
 }
 
 .prodList-text{
@@ -66,6 +98,67 @@
     color: black;
     border: 1px solid black;
     text-decoration: none;
+    transition: all .5s ease-in-out;
 
 }
 
+
+.prodList-btn:hover{
+    background-color: black;
+    color: white;
+
+}
+
+.prodList-inner-btn{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.prodList_img-btn{
+  
+}
+
+
+.btn-opacity{
+    opacity: 0;
+
+}
+
+.prodList-hvr-link{
+    position: absolute;
+    height: auto;
+    width: auto;
+    left: 21%;
+    bottom: 44%;
+    transform: translate3d(0px, 900%, 0px);
+    transition: all .8s ease;
+    opacity: 0;
+    background-color: white;
+    text-decoration: none;
+}
+
+/* .prodList-hvr-link:hover{
+    bottom: 55%;
+} */
+
+.prodList-hvr-link:hover{
+    background-color: black;
+    color: white;
+}
+
+.prodList-row:hover .prodList-hvr-link {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+    z-index: 2;
+    
+}
+
+.prodList-row:hover .prodList-overlay-script
+ {
+    display: block;
+    opacity: .3;
+    z-index: 1;
+    transition: all .5s ease-in-out;
+}

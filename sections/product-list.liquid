@@ -2,35 +2,38 @@
  {% assign prodList_data = section.settings %}
 
  <section class="prodList page-width element-margin">
-
-            {% for product in section.settings.collections.products limit: 8 %}
+        {% for product in section.settings.collections.products limit: 8 %}
+                <div class="prodList-row">
                   
-                   <a class="prodList-row" href="{{ product.url }}">
-                      <div class="prodList-imgArea">
-                            {% if product.featured_image %}
-                              {% render 'image', imageSrc: product.featured_image, classes: 'prodList-img' %}
-                            {% else %}
-                              {{ 'image' | placeholder_svg_tag: 'prodList-product-img' }}
-                            {% endif %}
+                  <a class="prodList-row-link" href="{{ product.url }}">
+                    
+                    <div class="prodList-imgArea">
+                      <a class="prodList-hvr-link btn-width-height" href="{{ product.url }}">{{ prodList_data.view_btn_txt }}</a>
+                      <div class="prodList-overlay-script">&nbsp;
                       </div>
-                      <div class="prodList-text">
-                          <p class="">{{ product.price | money }}</p>
-                          <p class="">{{ product.title  }}</p>
-                      </div>
+                          {% if product.featured_image %}
+                           <div class="">
+                             {% render 'image', imageSrc: product.featured_image, classes: 'prodList-img' %}
+                             
+                           </div>
+                          {% else %}
+                            {{ 'image' | placeholder_svg_tag: 'prodList-product-img' }}
+                          {% endif %}
+                  
+                    </div>
+                    <div class="prodList-text">
+                        <p class="">{{ product.price | money }}</p>
+                        <p class="">{{ product.title }}</p>
+                    </div>
                   </a>
-            {% endfor %}
-
-
-              
+                </div>
+        {% endfor %}
  </section>
 
-
- <div class="prodList-btn-div page-width element-margin">
-  <a class="btn-width-height prodList-btn" href="{{ prodList_data.prod_list_url }}"> {{ prodList_data.prod_list_btn_text }}  </a>
-
- </div>
+      <div class="prodList-btn-div page-width element-margin">
+        <a class="btn-width-height prodList-btn" href="{{ prodList_data.prod_list_url }}"> {{ prodList_data.prod_list_btn_text }}  </a>
+      </div>
  
-
 
  {% schema %}
  {
@@ -53,6 +56,12 @@
         "type": "url",
         "id": "prod_list_url",
         "label": "product list link"
+      },
+      {
+        "type": "text",
+        "id": "view_btn_txt",
+        "label": "label",
+        "default": "View More"
       }
     ],
 
