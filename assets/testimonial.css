@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+.test-carousel{
+    height: auto;
+    display: block;
+}
+
+.test-cell{
+    position: relative;
+    width: 33%;
+   /* margin-right: 20px; */
+    /* padding: 0 40px; */
+    padding: 30px;
+    margin-right: 20px;
+    
+}
+
+.test_name{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.test_name-img{
+    width: auto;
+    height: auto;
+   
+    margin-right: 10px;
+}
+
+.test-title, .test-author{
+color: black;
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 13.33px;
+line-height: 24px;
+}
+
+
+.test_comma-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    
+}

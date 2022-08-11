@@ -1,0 +1,68 @@
+{{ "testimonial.css" | asset_url | stylesheet_tag }}
+
+{% assign test_data = section.blocks %}
+
+<div class="test-carousel page-width-custom element-margin">
+   {% for item in section.blocks %}
+  <div class="test-cell">
+      <img class="test_comma-img" src="{{ 'comma-Vector (1).png' | asset_url }}" />
+    <p class="test-title">{{ item.settings.test_title }}</p>
+    <div class="test_name">
+        <img class="test_name-img" src="{{ 'line-Vector.png' | asset_url }}" />
+        <p class="test-author">{{  item.settings.test_sub  }}</p>
+    </div>
+    
+  </div>
+  {% endfor %}
+</div>
+
+
+
+<script>
+
+var elem_test = document.querySelector('.test-carousel');
+var flkty_test = new Flickity( elem_test, {
+    cellAlign: 'left',
+    contain: true,
+    adaptiveHeight: true,
+    pageDots: false,
+    wrapAround: true,
+    accessibility: false,
+    prevNextButtons: false 
+});
+</script>
+
+
+{% schema %}
+{
+   "name": "testimonal item",
+
+   "blocks": [
+     {
+       "type": "text",
+       "name": "slider Item",
+       "settings": [
+         {
+            "type": "text",
+            "id": "test_title",
+            "label": "title boshao",
+           "default": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit."
+          },
+        {
+            "type": "text",
+            "id": "test_sub",
+            "label": "test sub",
+            "default": "ekhane tomar sub boshao"
+        }
+
+       ]
+     }
+   ],
+
+  "presets": [
+    {
+        "name":"testimonal"
+    }
+  ]
+}
+{% endschema %}

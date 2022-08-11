@@ -139,6 +139,68 @@
         "view_btn_txt": "View More"
       }
     },
+    "16602064718dcf985e": {
+      "type": "split-slider",
+      "blocks": {
+        "0356b957-329e-4886-8202-64855db22a85": {
+          "type": "hero_images",
+          "settings": {
+            "spSl_image": "shopify:\/\/shop_images\/boots-on-blue.jpg",
+            "spSl_title": "Make the Most of Morning",
+            "spSl_sub": "The quickest, easiest way to get in your fruits and veggies",
+            "spsl_btn_url": "\/",
+            "spSl_btn_text": "Get Started"
+          }
+        },
+        "5a41b7b5-419d-4835-b173-5a9420462d93": {
+          "type": "hero_images",
+          "settings": {
+            "spSl_image": "shopify:\/\/shop_images\/purchased-favorite-coffee.jpg",
+            "spSl_title": "Make the Most of Morning",
+            "spSl_sub": "The quickest, easiest way to get in your fruits and veggies",
+            "spsl_btn_url": "\/",
+            "spSl_btn_text": "Get Started"
+          }
+        }
+      },
+      "block_order": [
+        "0356b957-329e-4886-8202-64855db22a85",
+        "5a41b7b5-419d-4835-b173-5a9420462d93"
+      ],
+      "settings": {
+      }
+    },
+    "16602065269bb73d77": {
+      "type": "split-slider-second",
+      "blocks": {
+        "8c1e3e6a-31a7-4886-b36b-0402cd46c0b7": {
+          "type": "hero_images",
+          "settings": {
+            "spSlsec_image": "shopify:\/\/shop_images\/bts-video-bg-2.webp",
+            "spSlsec_title": "Make the Most of Morning",
+            "spSlsec-sub": "The quickest, easiest way to get in your fruits and veggies",
+            "spslsec_btn_url": "\/",
+            "spSlsec_btn_text": "Get Started"
+          }
+        },
+        "499ec7cd-14f3-4e55-8a75-abf3eb9c8c44": {
+          "type": "hero_images",
+          "settings": {
+            "spSlsec_image": "shopify:\/\/shop_images\/shearling-tote.webp",
+            "spSlsec_title": "Make the Most of Morning",
+            "spSlsec-sub": "The quickest, easiest way to get in your fruits and veggies",
+            "spslsec_btn_url": "\/",
+            "spSlsec_btn_text": "Get Started"
+          }
+        }
+      },
+      "block_order": [
+        "8c1e3e6a-31a7-4886-b36b-0402cd46c0b7",
+        "499ec7cd-14f3-4e55-8a75-abf3eb9c8c44"
+      ],
+      "settings": {
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "disabled": true,
@@ -310,6 +372,8 @@
     "1660046302d58b477e",
     "16600463145f1d9bc3",
     "16600463231c3e48db",
+    "16602064718dcf985e",
+    "16602065269bb73d77",
     "rich_text",
     "featured_collection",
     "collage",
