@@ -12,6 +12,7 @@ body{
     height: 700px;
     display: block;
     overflow-x: hidden;
+  
 }
 
 .slider .flickity-page-dots .dot.is-selected{
@@ -23,6 +24,7 @@ body{
  
 }
 
+
 .overlay{
    z-index: 1;
     position: absolute;
@@ -33,6 +35,7 @@ body{
     left: 0;
     background-color: #000;
 }
+
 
 .main-carousel{
     position: relative;
@@ -51,6 +54,7 @@ body{
     width: 100%;
     object-fit: cover;
 }
+
 
 .hero-content{
     z-index: 2;

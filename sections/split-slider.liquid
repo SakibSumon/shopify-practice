@@ -1,0 +1,111 @@
+{{ "split-slider.css" | asset_url | stylesheet_tag }}
+{% assign spSl_data = section.blocks %}
+
+
+<div class="spSl-slider">
+
+    <div class="spSl-rel">
+        <div class="spSl-content">
+        <div class="spsl-title">Your Healthy Breakfast</div>
+       
+        <div class="spsl-sub">Nutrient-rich fruits, vegetables, protein-filled yogurt, and milk gives an energy boost that will keep you going until lunch.</div>
+        <a class=" btn-width-height spSl-btn " href="{{ spSl_data.settings.spsl_btn_url }}">  View More  </a> 
+       
+    </div>
+    </div>
+    <div class="spSl-main-carousel">
+        {% for item in section.blocks %}
+        <div class="spSl-carousel-cell">
+            
+            {% if item.settings.spSl_image %}
+            {% render 'image', imageSrc: item.settings.spSl_image, classes: 'spSl-img' %}
+        {% else %}
+            {% render 'image', imageSrc: 'mentis-black.png' , classes: 'spSl-img', altTag: 'logo-black', isAsset: true %}
+        {% endif %}
+            <!-- <div class="spSl-hero-content page-width">
+            <h1 class="spSl-head align"> {{ item.settings.spSl_title }}</h1>
+            <p class="spSl-sub align">{{ item.settings.spSl-sub }} </p>
+            
+            <div class="spSl-btns">
+            <!-- <button class="btn-width-height btn1-hover "> <a class="btn1-font" href="{{ item.settings.btn1_url }}"> </a>
+                {{ item.settings.btn1_text }}</button>
+
+            <button class="btn-width-height black-bck btn2-hover "> <a class="btn2-font" href="{{ item.settings.btn2_url }}"> </a> {{ item.settings.btn2_text }}</button> -->
+            <!-- <a class=" btn-width-height btn btn1" href="{{ item.settings.btn1_url }}">   {{ item.settings.btn1_text }}  </a>
+            <a class=" btn-width-height btn btn2 " href="{{ item.settings.btn2_url }}">   {{ item.settings.btn2_text }}  </a> -->
+            <!-- </div>
+            </div> --> 
+            <!-- <div class="overlay">&nbsp;</div> -->
+        </div>
+        {% endfor %}
+        </div>
+</div>
+
+
+<script>
+  var elem_split = document.querySelector('.spSl-main-carousel');
+  var flkty_split = new Flickity( elem_split, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+    adaptiveHeight: true,
+    pageDots: true
+  });
+</script>
+
+
+
+
+{% schema %}
+{
+   "name": "Split Slider",
+
+  "blocks": [
+    {
+      "type": "hero_images",
+      "name": "Slider Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "spSl_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "spSl_title",
+          "label": "Title",
+          "default": "Make the Most of Morning"
+        },
+        {
+          "type": "text",
+          "id": "spSl-sub",
+          "label": "Subtitle",
+          "default": "The quickest, easiest way to get in your fruits and veggies"
+        },
+
+       {
+        "type": "url",
+        "id": "spsl_btn_url",
+        "label": "label",
+       "default": "/"
+       },
+
+      {
+        "type": "text",
+        "id": "spSl_btn_text",
+        "label": "label",
+        "default": "Get Started"
+      }
+
+      ]
+    }
+  ],
+  
+ "presets": [
+    {
+       
+        "name":"split slider"
+    }
+ ]
+}
+{% endschema %}

@@ -133,6 +133,10 @@
     "16600463231c3e48db": {
       "type": "product-list",
       "settings": {
+        "collections": "frontpage",
+        "prod_list_btn_text": "View Mo",
+        "prod_list_url": "",
+        "view_btn_txt": "View More"
       }
     },
     "rich_text": {
