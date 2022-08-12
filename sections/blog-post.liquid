@@ -1,0 +1,47 @@
+{{ "blog-post.css" | asset_url | stylesheet_tag }}
+
+{% assign blog_data = section.blocks %}
+
+<section class="bgpst">
+
+     {% for item in section.blocks %}
+        <div class="bgpst-cell">
+            <!-- <img class="test_comma-img" src="{{ 'comma-Vector (1).png' | asset_url }}" /> -->
+            <!-- <p class="test-title">{{ item.settings.test_title }}</p> -->
+            <div class="test_name">
+                <!-- <img class="test_name-img" src="{{ 'line-Vector.png' | asset_url }}" /> -->
+                <p class="test-author">{{  item.settings.test_sub  }}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Blog Post",
+
+  "blocks": [
+  {
+     "type": "text",
+     "name": "Blog Item",
+     "settings": [
+        {
+            "type": "blog",
+            "id": "blog_item",
+            "label": "blog Item"
+        }
+    ]
+  }
+],
+
+"presets": [
+    {
+      
+        "name":" Bloog Post"
+    }
+]
+}
+{% endschema %}
