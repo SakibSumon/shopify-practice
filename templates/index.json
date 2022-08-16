@@ -170,6 +170,111 @@
       "settings": {
       }
     },
+    "16603044641e9dda92": {
+      "type": "testimonal",
+      "blocks": {
+        "f55897a5-dc49-4ee6-a9ab-e968fcd7bdbe": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "a0bf7591-b15b-4d08-8217-e5f0d9df9b4f": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "d510531d-e411-4d89-80e9-129c53f1c843": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "37207e18-3404-43d2-9898-b13aa47f70f2": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "6f0af7f3-cd45-48cf-812f-da293c931ac5": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "5f678075-1be6-450e-9a31-3fa10a51fd44": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "81cd2015-f35b-4009-a514-20de4437aec9": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "82c4d967-8782-4bea-bf62-55009dba7ed2": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "8276fa4c-6a04-45bb-ba90-1847b1e2a8f5": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "813113b6-7793-467a-b8a5-d03653598077": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "53659665-0d25-4397-9023-4eecb5ede397": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        },
+        "5e9cbc15-6881-489e-bcd5-f6abddadcb13": {
+          "type": "text",
+          "settings": {
+            "test_title": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugit.",
+            "test_sub": "ekhane tomar sub boshao"
+          }
+        }
+      },
+      "block_order": [
+        "f55897a5-dc49-4ee6-a9ab-e968fcd7bdbe",
+        "a0bf7591-b15b-4d08-8217-e5f0d9df9b4f",
+        "d510531d-e411-4d89-80e9-129c53f1c843",
+        "37207e18-3404-43d2-9898-b13aa47f70f2",
+        "6f0af7f3-cd45-48cf-812f-da293c931ac5",
+        "5f678075-1be6-450e-9a31-3fa10a51fd44",
+        "81cd2015-f35b-4009-a514-20de4437aec9",
+        "82c4d967-8782-4bea-bf62-55009dba7ed2",
+        "8276fa4c-6a04-45bb-ba90-1847b1e2a8f5",
+        "813113b6-7793-467a-b8a5-d03653598077",
+        "53659665-0d25-4397-9023-4eecb5ede397",
+        "5e9cbc15-6881-489e-bcd5-f6abddadcb13"
+      ],
+      "settings": {
+      }
+    },
     "16602065269bb73d77": {
       "type": "split-slider-second",
       "blocks": {
@@ -199,6 +304,15 @@
         "499ec7cd-14f3-4e55-8a75-abf3eb9c8c44"
       ],
       "settings": {
+      }
+    },
+    "166030450023a41fff": {
+      "type": "blog-post",
+      "settings": {
+        "blog_item": "news",
+        "show_date": true,
+        "show_author": false,
+        "show_image": true
       }
     },
     "rich_text": {
@@ -262,6 +376,7 @@
     },
     "collage": {
       "type": "collage",
+      "disabled": true,
       "blocks": {
         "collection-0": {
           "type": "collection",
@@ -300,6 +415,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -313,6 +429,7 @@
     },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
@@ -373,7 +490,9 @@
     "16600463145f1d9bc3",
     "16600463231c3e48db",
     "16602064718dcf985e",
+    "16603044641e9dda92",
     "16602065269bb73d77",
+    "166030450023a41fff",
     "rich_text",
     "featured_collection",
     "collage",

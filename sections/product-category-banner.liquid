@@ -89,6 +89,31 @@
                   </div>
             {% endfor %}
       </div>
+
+
+
+
+       {% for product in section.settings.product_collection limit: 8 %}
+                  <div class="product-cell">
+                          <!-- <img class="product-img" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" />  -->
+                   <a href="{{ product.url }}">
+                      <div class=" product-div">
+                            {% if product.featured_image %}
+                              {% render 'image', imageSrc: product.featured_image, classes: 'product-img' %}
+                            {% else %}
+                              {{ 'image' | placeholder_svg_tag: 'product-img' }}
+                            {% endif %}
+                      </div>
+                      <div class="product-content">
+                          <p class="product-desc price">{{ product.price | money }}</p>
+                          <p class="product-desc pro-title">{{ product.title  }}</p>
+                      </div>
+                  </a>
+                  </div>
+            {% endfor %}
+
+
+
   </section>
 
   <div class="product_btn element-margin-top ">
@@ -141,6 +166,12 @@
         "type": "collection",
         "id": "collection",
         "label": "category top left"
+    }, 
+
+     {
+        "type": "product",
+        "id": "product_collection",
+        "label": "product-col"
     }, 
 
     {
