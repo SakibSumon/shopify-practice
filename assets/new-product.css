@@ -1,0 +1,98 @@
+.share-button{
+    display: none;
+}
+
+
+.product__info-wrapper{
+    display: flex;
+    justify-items: center;
+   
+    align-items: center;
+}
+
+.price-item--regular{
+    display: none;
+}
+
+
+.product__text{
+    display: none;
+}
+
+.product .price .badge{
+    display: none;
+}
+
+.twitter{
+    display: inline-block;
+}
+
+.fb{
+    display: inline-block;
+}
+
+.pin{
+    display: inline-block;
+}
+
+.twitter a{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+     padding: 10px 16px;
+}
+
+.fb a{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+     padding: 10px 16px;
+}
+
+.pin a{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+     padding: 10px 16px;
+}
+
+.twitter a ,p{
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.fb a ,p{
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.pin a ,p{
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+
+.twt-pos{
+    display: flex;
+    justify-items: center;
+   gap: 5px;
+    align-items: center;
+}
+
+.fb-pos{
+    display: flex;
+    justify-items: center;
+   gap: 5px;
+    align-items: center;
+}
+
+.pin-pos{
+    display: flex;
+    justify-items: center;
+   gap: 5px;
+    align-items: center;
+}
+
+.product--stacked .product__media-item{
+    max-width: 24%;
+}
