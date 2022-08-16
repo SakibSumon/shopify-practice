@@ -7,6 +7,7 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'new-product.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -57,13 +58,17 @@
             -%}
             {%- if product.selected_or_first_available_variant.featured_media != null -%}
               {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
-              <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="product__media-item grid__item slider__slide is-active{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ featured_media.id }}">
-                {%- assign media_position = 1 -%}
-                {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
-              </li>
+     
+                <li class="li_item" id="Slide-{{ section.id }}-{{ featured_media.id }}" class="product__media-item grid__item slider__slide is-active{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ featured_media.id }}">
+                  {%- assign media_position = 1 -%}
+                  {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
+                </li> 
+          
             {%- endif -%}
+            
             {%- for media in product.media -%}
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+             
                 <li id="Slide-{{ section.id }}-{{ media.id }}" class="product__media-item grid__item slider__slide{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
                   {%- liquid
                     assign media_position = media_position | default: 0 | plus: 1
@@ -74,8 +79,10 @@
                     render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
                   -%}
                 </li>
+            
               {%- endunless -%}
             {%- endfor -%}
+           
           </ul>
           <div class="slider-buttons no-js-hidden quick-add-hidden{% if media_count < 2 or section.settings.mobile_thumbnails == 'show' %} small-hide{% endif %}">
             <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
@@ -246,10 +253,33 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
+
+
+            <div class="social-media">
+              <div class="twitter">
+               <a href="" class="twt-pos"> 
+                 {% render 'twt 1.liquid' %}
+                <p>Tweet</p> </a>
+              </div>
+
+              <div class="fb">
+               <a href="" class="fb-pos"> 
+                 {% render 'fb 1.liquid' %}
+                <p>Facebook</p> </a>
+              </div>
+
+              <div class="pin">
+               <a href="" class="pin-pos"> 
+                 {% render 'pin 1.liquid' %}
+                <p>Pin</p> </a>
+              </div>
+            </div>
+
+
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
-            <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+            <!-- <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
               <details id="Details-{{ block.id }}-{{ section.id }}">
                 <summary>
                   <div class="summary__title">
@@ -265,9 +295,9 @@
                   {{ block.settings.page.content }}
                 </div>
               </details>
-            </div>
+            </div> -->
           {%- when 'quantity_selector' -%}
-            <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
+            <!-- <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
                 {{ 'products.product.quantity.label' | t }}
               </label>
@@ -290,7 +320,14 @@
                   {% render 'icon-plus' %}
                 </button>
               </quantity-input>
-            </div>
+            </div> -->
+
+
+            
+
+
+
+
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
                 <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.text | default: block.settings.page.title }}</button>
@@ -1005,6 +1042,12 @@
     }
   ],
   "settings": [
+
+    {
+      "type": "collection",
+      "id": "collection_product",
+      "label": "category top left"
+    }, 
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
