@@ -93,3 +93,14 @@
 .product--stacked .product__media-item{
     max-width: 24%;
 }
+
+
+/* .global-media-settings{
+position: relative;
+padding-top: 124%;
+} */
+
+.product__media{
+
+    padding-top: 126% !important;
+}
