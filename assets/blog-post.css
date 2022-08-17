@@ -1,14 +1,51 @@
+.bgpst a, p, h1, h2, h3, h4, h5, h6{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.blog-url{
+    color:blue
+}
+
+.blg-title{
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.blog-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+}
+
 .blog-text{
     color: black;
+    line-height: 12px;
+}
+
+.blog-title{
+    margin: 0;
 }
 
 .blog-imgArea{
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
+   
+}
+.blog-imgArea:not(:last-child){
+     padding-right: 30px;
 }
 
 .blog-img{
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
 }
+
+.blog-tag{
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+}
+
